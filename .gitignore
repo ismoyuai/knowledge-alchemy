@@ -1,0 +1,93 @@
+# ==========================================
+# 墨宇Logic的知识炼金炉 · .gitignore
+# 策略：完整同步笔记、脚本与插件配置；只忽略设备状态、缓存、大文件与敏感文件
+# ==========================================
+
+# ---------------- 系统与环境文件 ----------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+._*
+.Spotlight-V100
+.Trashes
+
+# ---------------- 编辑器 / IDE / Agent 工作目录 ----------------
+.vscode/
+.idea/
+.sublime-*
+*.code-workspace
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+.claude/
+.pi/
+.plans/
+
+# ---------------- Obsidian 设备状态（跨设备同步会冲突，务必忽略）----------------
+# 窗口布局、最后打开的文件、UI 状态
+.obsidian/workspace*
+.obsidian/app-state.json
+.obsidian/*.log
+
+# ---------------- Obsidian 插件缓存（只忽略缓存，插件主文件要同步）----------------
+.obsidian/plugins/*/node_modules/
+.obsidian/plugins/*/cache/
+.obsidian/plugins/*/temp/
+.obsidian/plugins/*/.git/
+.obsidian/plugins/*/__pycache__/
+.obsidian/plugins/*/typings/
+.obsidian/plugin-skills/*
+
+# ---------------- 回收站与备份 ----------------
+.trash/
+.obsidian/.trash/
+*.bak
+*.backup
+*.old
+
+# ---------------- 大文件（★ 旧库 .git 涨到 213M 的主因，务必拦住）----------------
+# 知识库只存文字与轻量附件；安装包 / 压缩包 / 音视频一律不进版本库
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.iso
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flv
+*.wmv
+*.mp3
+*.wav
+*.m4a
+
+# ---------------- 安全与密钥 ----------------
+# ⚠️ 抖音 cookies（含 sessionid = 账号级凭证）存在 ~/.config/douyin-cookies.txt，库外
+.env
+.env.*
+*.key
+*.pem
+*.cert
+*.p12
+*cookies*.txt
+secrets.md
+passwords.md
+credentials.md
+# 如果某个插件的 data.json 里含 API Token，单独追加：
+# .obsidian/plugins/某插件名/data.json
+
+# ---------------- 工具运行时产物 ----------------
+# vault-scripts 的工作目录（脚本默认写到 /tmp，这里是兜底）
+/vault-scripts/**/out/
+/vault-scripts/**/work/
+/_work/
+/_tmp/

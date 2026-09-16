@@ -1,0 +1,54 @@
+# ==========================================
+# 墨宇Logic的知识炼金炉 · .gitattributes
+# 目的：WSL(Linux) 与 Windows 双端编辑同一个库，统一行尾，避免整文件假 diff
+# ==========================================
+
+# 默认：让 git 自动判断文本文件，检出时统一 LF
+* text=auto eol=lf
+
+# ---------------- 文本：强制 LF ----------------
+# Obsidian 与脚本都能正确处理 LF；CRLF 会让 WSL 下的脚本报 $'\r' 错误
+*.md      text eol=lf
+*.markdown text eol=lf
+*.txt     text eol=lf
+*.sh      text eol=lf
+*.bash    text eol=lf
+*.mjs     text eol=lf
+*.cjs     text eol=lf
+*.js      text eol=lf
+*.ts      text eol=lf
+*.json    text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.css     text eol=lf
+*.html    text eol=lf
+*.svg     text eol=lf
+*.py      text eol=lf
+*.toml    text eol=lf
+*.base    text eol=lf
+
+# ---------------- 二进制：禁止行尾转换 ----------------
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.webp    binary
+*.bmp     binary
+*.ico     binary
+*.pdf     binary
+*.zip     binary
+*.7z      binary
+*.rar     binary
+*.mp4     binary
+*.mov     binary
+*.mp3     binary
+*.wav     binary
+*.woff    binary
+*.woff2   binary
+*.ttf     binary
+
+# ---------------- diff 行为 ----------------
+# 中文内容用 markdown diff 更可读
+*.md      diff=markdown
+# 锁文件不算语义变更
+package-lock.json -diff linguist-generated
