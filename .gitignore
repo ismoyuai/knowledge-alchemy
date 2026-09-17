@@ -41,6 +41,9 @@ ehthumbs.db
 .obsidian/plugins/*/typings/
 .obsidian/plugin-skills/*
 
+# obsidian-git 运行时生成的凭证辅助脚本（机器相关，不入库）
+.obsidian/plugins/obsidian-git/obsidian_askpass.sh
+
 # ---------------- 回收站与备份 ----------------
 .trash/
 .obsidian/.trash/
