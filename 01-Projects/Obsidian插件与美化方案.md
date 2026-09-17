@@ -217,7 +217,7 @@ tags:
 | 5 | Templater：模板目录 → `Templates/`；清掉旧库的脚本热键 | ✅ |
 | 6 | 核心「模板」目录指向 `Templates/` | `.obsidian/templates.json` ✅ |
 | 7 | Git 插件：照搬旧配置；**临时**关掉推送与开机拉取（远端未配前防报错） | ✅ |
-| 8 | Git 收录整理：插件 / 主题 / 片段 / 配置 / 文档按 `.gitignore` 规则入库（09-17 提交） | ✅ |
+| 8 | Git 收录整理：插件 / 主题 / 片段 / 配置 / 文档全部入库；askpass 忽略规则固化进 `.gitignore` | ✅ |
 
 **还差一步**：**远端仓库** —— 同步的另一半。定了（GitHub / Gitee？公开 / 私有？）我配 remote + push，并把 Git 插件的推送/拉取改回正常。
 
