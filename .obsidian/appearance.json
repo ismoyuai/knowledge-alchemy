@@ -1,1 +1,10 @@
-{}
+{
+  "cssTheme": "Blue Topaz",
+  "enabledCssSnippets": [
+    "【BlueTopaz】表格样式TableStyles",
+    "autohide-yaml-header",
+    "projectCard",
+    "Tab"
+  ],
+  "theme": "obsidian"
+}
